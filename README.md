@@ -1,2 +1,2 @@
 # misc
-Miscellaneous programs
+Miscellaneous scripts for practice or use or for fun
