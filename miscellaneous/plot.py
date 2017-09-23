@@ -64,12 +64,12 @@ for player in players:
     stats.insert(0, player["score"])
     stats.insert(0, player["rank"])
     stats.insert(0, player["name"])
-    #[name, rank, score, played, won, played third round, won on third round, rounds played, rounds won]
+    #[name, rank, score, played, won, played third round, won on third round, rounds played, rounds won, rounds won %]
     if stats[3] != 0:
         stats.insert(5, round((stats[4]/stats[3]) * 100, 1))
     else:
         stats.insert(5, 0)
-    #[name, rank, score, played, won, win %, played third round, won on third round, rounds played, rounds won]
+    #[name, rank, score, played, won, win %, played third round, won on third round, rounds played, rounds won, rounds won %]
     playerList.append(stats)
 prosentage = 0
 prosTotal = 0
@@ -108,7 +108,7 @@ with tag("html"):
             text("Keskiarvoinen voittoprosentti yli neljä peliä pelanneilla oli {} %".format(prosentage))
         with tag("table", border="1"):
             with tag("tr"):
-                #[name, rank, score, played, won, win %, played third round, won on third round]
+                #[name, rank, score, played, won, win %, played third round, won on third round, rounds played, rounds won, rounds won %]
                 with tag("th"):
                     text("Name")
                 with tag("th"):
